@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Sridh Music Academy</title>
+    
+</head>
+<body>
+    <center><h1 style="color: brown;">SRIDH MUSIC ACADEMY</h1></center><hr>
+
+<div class="tab" >
+  <button class="tablinks" onclick="openpage(event, 'home')" id="defaultopen">Home</button>
+  <button class="tablinks" onclick="openpage(event, 'course')">Course</button>
+  <button class="tablinks" onclick="openpage(event, 'Enquiry')">Enquiry</button>
+</div>
+
+<div id="home" class="tabcontent">
+  <center><img src="./assests/AdobeStock_202591641.jpg" height="820"  alt="music poster"></center>
+  <center><h2><a href="./public/About us.html">About Us</a></h2></center>
+  <p></p>
+</div>
+
+<div id="course" class="tabcontent">
+  <h3>Courses Offered</h3>
+  <div class="course" onclick="toggleDetails('vocals-details')">
+    <h4>Vocals</h4>
+    <div id="vocals-details" class="course-details">
+      <p>Enhance your vocal skills with our expert guidance. Suitable for all levels, from beginners to advanced singers.</p>
+      <p><strong>Duration:</strong> 10 weeks</p>
+      <p><strong>Fees:</strong> ₹20,000</p>
+    </div>
+  </div>
+  <div class="course" onclick="toggleDetails('keyboard-details')">
+    <h4>Keyboard</h4>
+    <div id="keyboard-details" class="course-details">
+      <p>Learn to play the keyboard with our expert instructors. Suitable for all levels, from beginners to advanced players.</p>
+      <p><strong>Duration:</strong> 12 weeks</p>
+      <p><strong>Fees:</strong> ₹22,000</p>
+    </div>
+  </div>
+  <div class="course" onclick="toggleDetails('guitar-details')">
+    <h4>Guitar</h4>
+    <div id="guitar-details" class="course-details">
+      <p>Master the art of guitar playing with various styles including acoustic, electric, and classical. All skill levels welcome.</p>
+      <p><strong>Duration:</strong> 10 weeks</p>
+      <p><strong>Fees:</strong> ₹18,000</p>
+    </div>
+  </div>
+  <div class="course" onclick="toggleDetails('violin-details')">
+    <h4>Violin</h4>
+    <div id="violin-details" class="course-details">
+      <p>Explore the beautiful sounds of the violin. Our classes cater to both beginners and experienced violinists.</p>
+      <p><strong>Duration:</strong> 14 weeks</p>
+      <p><strong>Fees:</strong> ₹25,000</p>
+    </div>
+  </div>
+  <div class="course" onclick="toggleDetails('drums-details')">
+    <h4>Drums</h4>
+    <div id="drums-details" class="course-details">
+      <p>Get into the rhythm with our comprehensive drumming courses. Perfect for beginners and those looking to improve their skills.</p>
+      <p><strong>Duration:</strong> 8 weeks</p>
+      <p><strong>Fees:</strong> ₹15,000</p>
+    </div>
+  </div>
+</div>
+
+<div id="Enquiry" class="tabcontent">
+  <h3>Enquiry Form</h3>
+  <form id="enquiry-form" onsubmit="showThankYouMessage(event)">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+    
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" required><br><br>
+    
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+    
+    <input type="submit" value="Submit">
+  </form>
+
+  <div id="thank-you-message" style="display:none; margin-top:20px;">
+    <h2>Thank You!</h2>
+    <p>Your enquiry has been received. We will get back to you soon.</p>
+  </div>
+</div>
+
+<script src="script.js"></script>    
+</body>
+       
+</html>
